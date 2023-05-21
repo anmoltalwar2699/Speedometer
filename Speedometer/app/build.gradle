@@ -1,0 +1,42 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 33
+
+    defaultConfig {
+        applicationId "com.speedometer.AppsCrafted"
+        minSdkVersion 28
+        targetSdkVersion 33
+        versionCode 7
+        versionName "v7.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        namespace 'com.speedometer.AppsCrafted'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            debuggable false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'com.github.anastr:speedviewlib:1.6.0'
+}
